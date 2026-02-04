@@ -4,8 +4,9 @@ on:
   workflow_dispatch:
   schedule:
     # Runs every Wednesday at 12pm UTC
-    - cron: '0 12 * * 3'
-
+    #v- cron: '0 12 * * 3'
+    # Runs at midnight every day
+    - cron: '0 0 * * *' 
 jobs:
   run_script:
     runs-on: ubuntu-latest
